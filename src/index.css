@@ -485,6 +485,13 @@ header .signup {
 .signup-form .title {
     margin-bottom: 100px;
 }
+.signup-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 .signup-form input {
     font-size: var(--ord-size);
     padding: 5px 15px;
@@ -495,6 +502,8 @@ header .signup {
     width: 50%;
 }
 .signup-form .yellow-block {
+    border: none;
+    outline: none;
     padding: 10px 40px;
     font-size: var(--ord-size);
 }
