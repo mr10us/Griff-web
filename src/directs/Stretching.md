@@ -1,5 +1,5 @@
 ---
 title: Стречінг
-image: '/image/stretch.png'
+image: '/image/directs/stretch.png'
 description: 
 ---

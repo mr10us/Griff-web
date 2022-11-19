@@ -1,5 +1,5 @@
 ---
 title: Дитячий фітнес
-image: '/image/kidsfitness.png'
+image: '/image/directs/kidsfitness.png'
 description: 
 ---

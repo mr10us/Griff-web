@@ -1,5 +1,5 @@
 ---
 title: Пілатес
-image: '/image/pilates.png'
+image: '/image/directs/pilates.png'
 description: 
 ---

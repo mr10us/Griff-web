@@ -1,5 +1,5 @@
 ---
 title: Спортивний одяг
-image: '/image/sportswear.png'
+image: '/image/directs/sportswear.png'
 description: 
 ---

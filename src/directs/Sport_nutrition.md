@@ -1,5 +1,5 @@
 ---
 title: Спортивне харчування
-image: '/image/sportnutrition.png'
+image: '/image/directs/sportnutrition.png'
 description: 
 ---
