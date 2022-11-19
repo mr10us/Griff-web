@@ -1,13 +1,15 @@
 backend:
   name: git-gateway
   branch: main
+media_folder: "public/images"
+public_folder: "/image"
 publish_mode: editorial_workflow
-media_folder: "public/image"
-public_folder: "/image/"
 collections:
   - name: "directs"
     label: "Напрямки"
     folder: "src/directs"
+    media_folder: "public/image/directs"
+    public_folder: "/image/directs"
     create: true
     slug: "{{slug}}"
     fields:
@@ -17,6 +19,8 @@ collections:
   - name: "coaches"
     label: "Тренери"
     folder: "src/coaches"
+    media_folder: "public/image/coaches"
+    public_folder: "/image/coaches"
     create: true
     slug: "{{slug}}"
     fields:
