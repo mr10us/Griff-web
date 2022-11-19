@@ -19,7 +19,7 @@ collections:
   - name: "coaches"
     label: "Тренери"
     folder: "src/coaches"
-    media_folder: "../public/image/coaches"
+    media_folder: "../image/coaches"
     public_folder: "/image/coaches"
     create: true
     slug: "{{slug}}"
