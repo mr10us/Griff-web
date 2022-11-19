@@ -1,5 +1,5 @@
 ---
 title: Poledance
-image: '/media/directs/poledance.png'
+image: '/image/directs/poledance.png'
 description: 
 ---

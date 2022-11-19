@@ -1,5 +1,5 @@
 ---
 title: New direction
-image: media/directs/pasha.png
+image: '/image/directs/pasha.png'
 description: pasha
 ---

@@ -1,5 +1,5 @@
 ---
 title: Тренажерний зал
-image: '/media/directs/gym.png'
+image: '/image/directs/gym.png'
 description: 
 ---

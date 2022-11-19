@@ -1,5 +1,5 @@
 ---
 title: Кардіозона
-image: '/media/directs/cardio.png'
+image: '/image/directs/cardio.png'
 description: 
 ---
