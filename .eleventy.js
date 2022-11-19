@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/font');
   eleventyConfig.addPassthroughCopy('./src/image');
   eleventyConfig.addPassthroughCopy('./src/admin');
+  eleventyConfig.addPassthroughCopy('./src/media');
 
   return {
     dir: {
