@@ -1,5 +1,5 @@
 ---
 title: pasha
-image: /image/pasha.png
+image: /media/pasha.png
 description: pasha
 ---

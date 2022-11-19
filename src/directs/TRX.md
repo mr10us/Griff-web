@@ -1,5 +1,5 @@
 ---
 title: TRX
-image: '/image/directs/TRX.png'
+image: '/media/directs/TRX.png'
 description: 
 ---
