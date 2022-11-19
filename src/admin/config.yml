@@ -15,3 +15,14 @@ collections:
       - { label: "Зображення", name: "image", widget: "image" }
       - { label: "Опис", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "coaches"
+    label: "Тренери"
+    folder: "src/coaches"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Напрямок тренера", name: "title", widget: "string" }
+      - { label: "Зображення", name: "image", widget: "image" }
+      - { label: "Освіта", name: "educationDesc", widget: "string" }
+      - { label: "Здобутки", name: "achievementDesc", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
