@@ -366,6 +366,7 @@ header .signup {
     background-color: rgba(0, 0, 0, 0.7);
     top: 100%;
     height: 100%;
+    width: 100%;
     opacity: 0;
     transition: all .2s ease-in-out;
 }
