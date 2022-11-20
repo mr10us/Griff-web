@@ -5,9 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/image/logo-bird.png" type="image/x-icon">
   <title>Дякуємо!</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+    body {
+      background-color: rgb(113,34,61);
+    }
     .main {
+      font-family: 'Roboto Condensed';
       position: relative;
       display: flex;
       flex-direction: column;
@@ -16,7 +22,6 @@
       height: 100vh;
       width: 100vw;
     }
-
     .card {
       position: relative;
       display: flex;
@@ -24,10 +29,36 @@
       width: 75%;
       max-width: 364px;
       padding: 24px;
-      background: white;
+      background: #ffb800;
       color: rgb(14, 30, 37);
       border-radius: 8px;
       box-shadow: 0 2px 4px 0 rgb(14 30 37 / 16%);
+    }
+    .card img {
+      filter: drop-shadow(0 0 20px rgb(113,34,61));
+    }
+    .card h2 {
+      text-transform: uppercase;
+      font-size: 1.7rem;
+      color: rgb(59, 59, 59);
+      text-align: center;
+    }
+    .card p {
+      font-size: 1.4rem;
+      color: white;
+      transition: color .3s ease-in-out;
+    }
+    .card p:hover {
+      color: rgb(113,34,61)
+    }
+    .card a {
+      text-decoration: none;
+      font-size: 1.4rem;
+      color: white;
+      transition: color .3s ease-in-out;
+    }
+    .card a:hover {
+      color: rgb(113,34,61)
     }
   </style>
 </head>
@@ -35,8 +66,9 @@
 <body>
   <div class="main">
     <div class="card">
-      <h2>Дякуємо за реєстрацію!</h2>
-      <p>Наш адміністратор скоро зв'яжеться з Вами</p>
+      <img src="./image/logo-bird.png" alt="logo">
+      <h2> Дякуємо за реєстрацію!</h2>
+      <p>Наш адміністратор незабаром зв'яжеться з Вами.</p>
       <a href="https://splendorous-gumption-3e8387.netlify.app/">← Назад</a>
     </div>
   </div>
