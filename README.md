@@ -1,4 +1,2 @@
-# RUN
-npm start
 
 
