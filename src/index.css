@@ -1,3 +1,9 @@
+/*
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
@@ -60,7 +66,8 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 
@@ -95,7 +102,10 @@ img {
 body {
     font-family: "Reforma Grotesk";
     color: var(--white);
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -120,13 +130,17 @@ body {
     height: 70px;
     border-radius: 50%;
     z-index: 1000;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
 .top-button img{
     position: absolute;
     left: 50%;
     top: 48%;
-    transform: translate(-50%, -50%) rotateZ(90deg);
+    -webkit-transform: translate(-50%, -50%) rotateZ(90deg);
+        -ms-transform: translate(-50%, -50%) rotate(90deg);
+            transform: translate(-50%, -50%) rotateZ(90deg);
     width: 50%;
     height: 50%;
     z-index: inherit;
@@ -137,8 +151,12 @@ body {
 
 
 #navMobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: fixed;
     top: 0;
     right: -100%;
@@ -146,6 +164,8 @@ body {
     height: 100vh;
     background-color: var(--black);
     z-index: 999;
+    -webkit-transition: right .3s ease-in-out;
+    -o-transition: right .3s ease-in-out;
     transition: right .3s ease-in-out;
 }
 #navMobile .wrapper > a {
@@ -163,16 +183,30 @@ body {
 #exit .stick {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 }
 #exit .stick:first-child {
-    transform-origin: center;
-    transform: rotate(45deg);
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 #exit .stick:last-child {
-    transform-origin: center;
-    transform: rotate(-45deg);
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
+
+
+
+
 
 header {
     position: relative;
@@ -194,23 +228,42 @@ header > .wrapper {
     position: relative;
 }
 header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 10%;
     padding-top: 25px;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 header nav .logo,
 header nav .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 header nav .hamburger {
     display: none;
-    flex-direction: column;
-    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     width: 70px;
     height: 70px;
 }
@@ -221,6 +274,8 @@ header nav .links > a {
     font-weight: 400;
     margin-right: 20px;
     font-size: 1.75rem;
+    -webkit-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
     transition: color .2s ease-in-out;
 }
 header nav .links > a:hover {
@@ -279,14 +334,27 @@ header .signup {
     padding-bottom: 50px;
 }
 .bot .manual .step {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .bot .manual .step .num {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 3.5rem; width: 3.5rem;
     margin-bottom: 25px;
     border: 3px solid white;
@@ -318,13 +386,22 @@ header .signup {
 }
 .why .why-container {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .why .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 450px;
     height: 135px;
     gap: 20px;
@@ -354,8 +431,12 @@ header .signup {
     padding-bottom: 50px;
 }
 .coaches .coaches-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .coaches .coach {
     width: 20%;
@@ -368,12 +449,15 @@ header .signup {
     height: 100%;
     width: 100%;
     opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
 .coaches .coach-photo:hover .hover-group {
     top: 0;
     opacity: 1;
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
 }
 .coaches .coach .hover-group h4 {
     font-size: 2rem;
@@ -408,8 +492,12 @@ header .signup {
     /* box-shadow: inset 0 0 20px #000; */
 }
 .mission .mission-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .mission .p-container {
     padding: 40px;
@@ -426,9 +514,14 @@ header .signup {
     background-color: var(--black);
 }
 .all-directs{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .all-directs > .direction {
     margin: 20px;
@@ -442,12 +535,16 @@ header .signup {
     background-size: 350px;
     background-repeat: no-repeat;
     background-position: center;
-    filter: brightness(90%);
+    -webkit-filter: brightness(90%);
+            filter: brightness(90%);
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
 .all-directs > .direction:hover > div{
     background-size: 400px;
-    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
 
 }
 .all-directs > .direction p {
@@ -459,9 +556,15 @@ header .signup {
 
 .signup-form {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     min-height: 75vh;
     padding: 50px;
     background-image: url("/image/gym.png");
@@ -479,18 +582,34 @@ header .signup {
 }
 .signup-form .content {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .signup-form .title {
     margin-bottom: 100px;
 }
 .signup-form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
 }
 .signup-form input {
@@ -514,6 +633,8 @@ footer {
     background-color: #71223D;
 }
 footer .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 footer .wrapper > div {
@@ -525,9 +646,16 @@ footer h3{
     font-weight: 400;
 }
 footer .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 footer .logo > p {
     font-size: var(--ord-size);
@@ -572,10 +700,15 @@ footer .contacts-container > p{
     border-radius: 50%;
     width: 24px;
     height: 26px;
+    -webkit-transition: -webkit-box-shadow .3s ease-in-out;
+    transition: -webkit-box-shadow .3s ease-in-out;
+    -o-transition: box-shadow .3s ease-in-out;
     transition: box-shadow .3s ease-in-out;
+    transition: box-shadow .3s ease-in-out, -webkit-box-shadow .3s ease-in-out;
 }
 .owl-dots .active {
-    box-shadow: 0 0 0 2px var(--white) !important;
+    -webkit-box-shadow: 0 0 0 2px var(--white) !important;
+            box-shadow: 0 0 0 2px var(--white) !important;
 }
 
 
@@ -676,7 +809,8 @@ section{
     }
 
     header nav {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
     header nav .contacts {
         margin-left: 30px;
@@ -716,7 +850,8 @@ section{
 
 
     .directs .all-directs {
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     }
 
 
@@ -754,7 +889,8 @@ section{
         scroll-behavior: auto;
     }
     header nav {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
     header nav .logo .logo-griff {
         width: 90%;
@@ -768,6 +904,8 @@ section{
         display: none;
     }
     header nav .hamburger {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         margin-left: 180px;
     }
@@ -805,8 +943,13 @@ section{
 
 
     .mission .mission-container {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .mission .mission-container .p-container {
         width: 100%;
@@ -823,7 +966,8 @@ section{
 
 
     footer .wrapper {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         gap: 4rem 0;
     }
     footer .wrapper .logo,
@@ -856,7 +1000,9 @@ section{
         position: absolute;
         width: 100%;
         top: 30%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
     }
     .bot .owl-two .owl-nav .owl-prev {
         position: absolute;
@@ -919,8 +1065,11 @@ section{
 
 
     header nav {
-        flex-wrap: wrap;
-        align-items: start;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: start;
         padding-top: 20px;
     }
     header nav .logo {
@@ -968,7 +1117,9 @@ section{
 
 
     .why .why-container .content {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 4fr;
         grid-template-columns: 1fr 4fr;
         margin-bottom: 40px;
         width: 90%;
@@ -1004,7 +1155,8 @@ section{
 
 
     footer .wrapper {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
     footer .wrapper > div {
         width: 100% !important;

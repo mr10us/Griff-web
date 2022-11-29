@@ -22,6 +22,13 @@ layout: 'base.njk'
         <img src="/image/left.svg" alt="top-arrow">
     </a>
 
+    <div class="direction-section-description">
+        <div class="direction-container">
+            <img src="" alt="">
+            <p>{{}}</p>
+        </div>
+    </div>
+
 
         <section id="bot" class="bot">
             <div class="wrapper">
@@ -163,8 +170,8 @@ layout: 'base.njk'
             <div class="content">
                 <h2 class="title">РЕЄСТРАЦІЯ НА БЕЗКОШКОВНЕ ЗАНЯТТЯ В <span>GRIFF</span></h2>
                 <form name="contact" method="POST" action="/confirmForm" data-netlify="true">
-                    <input type="text" name="name" placeholder="Ваше ім'я">
-                    <input type="text" name="phone" placeholder="Телефон">
+                    <input type="text" name="name" placeholder="Ваше ім'я" required>
+                    <input type="text" name="phone" placeholder="Телефон" required>
                     <button type="submit" class="yellow-block btn-event">РЕЄСТРАЦІЯ</button>
                 </form>
             </div>
