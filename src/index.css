@@ -1014,6 +1014,10 @@ section{
         max-width: 540px;
     }
 
+    
+    section:nth-child(4) {
+        transform: translateY(5%);
+    }
 
 
     .bot .owl-two .owl-nav{
