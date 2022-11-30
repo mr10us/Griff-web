@@ -209,7 +209,7 @@ body {
 .hidden {
     opacity: 0;
     filter: blur(5px);
-    transform: translateY(20%);
+    transform: translateY(10%);
     transition: all .5s;
 }
 .show {
@@ -222,8 +222,6 @@ body {
         transition: none;
     }
 }
-
-
 
 
 header {
@@ -1014,10 +1012,6 @@ section{
         max-width: 540px;
     }
 
-    
-    section:nth-child(4) {
-        transform: translateY(5%);
-    }
 
 
     .bot .owl-two .owl-nav{
