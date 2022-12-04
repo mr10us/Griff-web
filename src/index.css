@@ -550,7 +550,6 @@ header .signup {
     height: 290px;
     background-size: 350px;
     background-repeat: no-repeat;
-    background-position: center;
     -webkit-filter: brightness(90%);
             filter: brightness(90%);
     -webkit-transition: all .2s ease-in-out;
@@ -911,12 +910,12 @@ section{
             flex-wrap: wrap;
     }
     header nav .logo .logo-griff {
-        width: 90%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
     }
     header nav .logo .logo-bird {
-        width: 90%;
-        height: 90%;
+        width: 100%;
+        height: 100%;
     }
     header nav .links {
         display: none;
@@ -1106,11 +1105,11 @@ section{
         margin-left: 0;
     }
     header nav .contacts .yellow-block {
-        padding: 10px 5px;
+        padding: 10px;
     }
     header .signup {
         padding: 5px 30px;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     .yellow-block {
         border-radius: 25px;
@@ -1131,6 +1130,10 @@ section{
 
     .bot .owl-two .owl-nav {
         top: 27%;
+    }
+
+    .bot .wrapper > p {
+        text-align: center;
     }
 
 
@@ -1161,6 +1164,9 @@ section{
 
     .mission .mission-container > img {
         width: 90%;
+    }
+    .mission .p-container > p {
+        text-align: justify;
     }
 
 
