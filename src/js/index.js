@@ -69,6 +69,20 @@ $(document).ready(function () {
 $(".owl-two").owlCarousel({
   items: 3,
   navText: ["<img src='/image/left.svg'>", "<img src='/image/right.svg'>"],
+  afterInit: function () {
+    owl.find('.owl-wrapper').each(function () {
+      var w = $(this).width() / 2;
+      $(this).width(w);
+      $(this).css('margin', '0 auto');
+    });
+  },
+  afterUpdate: function () {
+    owl.find('.owl-wrapper').each(function () {
+      var w = $(this).width() / 2;
+      $(this).width(w);
+      $(this).css('margin', '0 auto');
+    });
+  },
   responsive: {
     320: {
       items: 1,
