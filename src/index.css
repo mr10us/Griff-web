@@ -857,7 +857,7 @@ section{
     .coaches .coach .hover-group p {
         font-size: .9rem;
     }
-    .coaches .owl-stage {
+    .coaches .owl-carousel .owl-stage {
         margin: 0 auto !important;
     }
 
