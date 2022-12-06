@@ -857,6 +857,9 @@ section{
     .coaches .coach .hover-group p {
         font-size: .9rem;
     }
+    .coaches .owl-stage {
+        margin: 0 auto;
+    }
 
 
     .mission .mission-container > img {
