@@ -111,7 +111,9 @@ layout: 'base.njk'
                         <div class="coach">
                             <div class="coach-photo" style="background-image: url({{ coach.data.image }});">
                                 <div class="hover-group">
+                                    {% if coach.data.educationDesc  %}
                                     <h4>Освіта</h4>
+                                    {% endif %}
                                     <p>{{ coach.data.educationDesc}}</p>
                                     <h4>Здобутки</h4>
                                     <p>{{ coach.data.achievementDesc}}</p>
