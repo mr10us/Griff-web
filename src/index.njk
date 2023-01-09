@@ -22,21 +22,27 @@ layout: 'base.njk'
         <img src="/image/left.svg" alt="top-arrow">
     </a>
 
-    {# <div class="direction-section-description">
-        <div class="direction-container">
-            <img src="" alt="">
-            <p>{{}}</p>
+    <div id="directionPopup" class="none">
+        <div class="wrapper"></div>
+        <div class="directionSection">
+            <div class="directionContainer">
+                <div class="image" style="background-image: url(/image/unloaded.png)"></div>
+                <div class="textContainer">
+                    <h2>There must be a direct article</h2>
+                    <p>There must be a text description</p>
+                </div>
+            </div>
         </div>
-    </div> #}
+    </div>
 
 
         <section id="bot" class="bot hidden">
             <div class="wrapper">
                 <h2 class="title">ВІРТУАЛЬНИЙ ТРЕНЕР <span>GRIFF</span> В ТЕЛЕГРАМ</h2>
-                <p>Ми створили бот, який покроково дозволить вам створити рельєф тіла для певної мети. Оберіть в меню
+                <p>Ми створили бот, який покроково дозволить вам створити рельєф тіла для певної мети.<br>Оберіть в меню
                     бота напрямок і він продемонструє, як правильно виконувати вправи, скільки, і в якій
-                    послідовності. Ми впевнені, що такий бот суттєво облегшить тренування, або   замінить роботу персонального тренера. В разі, якщо
-                    ви хочете особистого супровода наших тренерів, скористуйтесь такою можливістью. Вони всі
+                    послідовності.<br>Ми впевнені, що такий бот суттєво облегшить тренування, або   замінить роботу персонального тренера.<br>В разі, якщо
+                    ви хочете особистого супровода наших тренерів, скористайтесь такою можливістью. Вони всі
                     мають високу фахову підготовку та нагороди.</p>
                 <div class="owl-two owl-carousel manual">
                     <div class="step">
@@ -166,19 +172,12 @@ layout: 'base.njk'
                 <div class="all-directs">
                     
                     {%- for direct in collections.direct -%}
-                        <div class="direction">
+                        <div id="direction">
                             <div style="background-image: url({{ direct.data.image }})"></div>
                             <p>{{ direct.data.title }}</p>
+                            <p class="description none">{{ direct.data.description }}</p>
                         </div>
                     {%- endfor -%}
-
-                    
-                    <!-- <div class="direction-desc">
-                            <div class="wrapper">
-                                <div style="background-image: url('{{ d.image.url }}')"></div>
-                                <p>{{ d.description }}</p>
-                            </div>
-                        </div> -->
                 </div>
             </div>
         </section>
