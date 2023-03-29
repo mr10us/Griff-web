@@ -1,5 +1,5 @@
 ---
-name: Мамонова Марія
+fullName: Мамонова Марія
 title: Тренер з TRX та функціонального тренінгу
 image: /image/coaches/img_5701.jpg
 educationDesc: Вища медична освіта, СумДУ, лікарська справа.
