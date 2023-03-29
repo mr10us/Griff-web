@@ -24,7 +24,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Ім'я тренера", name: "fullName", widget: "string" }
+      - { label: "Ім'я тренера", name: "name", widget: "string" }
       - { label: "Напрямок тренера", name: "title", widget: "string" }
       - { label: "Зображення", name: "image", widget: "image" }
       - { label: "Освіта", name: "educationDesc", widget: "string", required: false }
