@@ -251,7 +251,7 @@ body {
 }
 header {
   position: relative;
-  height: 800px;
+  height: 1000px;
   font-weight: 500;
   background-image: url("/image/background.png");
   background-position: center;
@@ -345,6 +345,7 @@ header nav .contacts p {
 header h1 {
   font-size: var(--main-title-size);
   font-weight: 400;
+  text-transform: uppercase;
 }
 header h1 span {
   color: var(--yellow);
@@ -362,6 +363,13 @@ header .signup {
   padding: 10px 50px;
   font-size: 2.5rem;
 }
+header .review {
+  margin-bottom: 70px;
+  font-size: 1.5rem;
+  font-family: 'Ubuntu';
+}
+
+
 .bot {
   background-color: var(--black);
 }
@@ -859,6 +867,9 @@ section {
   .wrapper {
     max-width: 960px;
   }
+  #header {
+    height: 1150px;
+  }
   header nav {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -1025,6 +1036,10 @@ section {
   .wrapper {
     max-width: 540px;
   }
+  header .review {
+    margin-bottom: 70px;
+    font-size: 1rem;
+  }
   .bot .owl-two .owl-nav {
     position: absolute;
     width: 100%;
@@ -1071,6 +1086,9 @@ section {
 @media (max-width: 575px) {
   .wrapper {
     max-width: 90%;
+  }
+  #header {
+    height: 800px;
   }
   .top-button {
     bottom: 15px;

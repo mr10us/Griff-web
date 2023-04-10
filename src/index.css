@@ -322,6 +322,7 @@ header nav .contacts p {
 header h1 {
     font-size: var(--main-title-size);
     font-weight: 400;
+    margin-bottom: 70px;
 }
 header h1 span {
     color: var(--yellow);
