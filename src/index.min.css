@@ -5,7 +5,8 @@
   src: url("/font/ReformaGroteskBold.eot");
   src: local("Reforma Grotesk Bold"), local("/font/ReformaGroteskBold"),
     url("/font/ReformaGroteskBold.eot?#iefix") format("embedded-opentype"),
-    url("/font/ReformaGroteskBold.woff2") format("woff2"), url("/font/ReformaGroteskBold.woff") format("woff"),
+    url("/font/ReformaGroteskBold.woff2") format("woff2"),
+    url("/font/ReformaGroteskBold.woff") format("woff"),
     url("/font/ReformaGroteskBold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
@@ -15,7 +16,8 @@
   src: url("/font/ReformaGroteskDemi.eot");
   src: local("Reforma Grotesk Demi"), local("/font/ReformaGroteskDemi"),
     url("/font/ReformaGroteskDemi.eot?#iefix") format("embedded-opentype"),
-    url("/font/ReformaGroteskDemi.woff2") format("woff2"), url("/font/ReformaGroteskDemi.woff") format("woff"),
+    url("/font/ReformaGroteskDemi.woff2") format("woff2"),
+    url("/font/ReformaGroteskDemi.woff") format("woff"),
     url("/font/ReformaGroteskDemi.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -25,7 +27,8 @@
   src: url("/font/ReformaGroteskMedium.eot");
   src: local("Reforma Grotesk Medium"), local("/font/ReformaGroteskMedium"),
     url("/font/ReformaGroteskMedium.eot?#iefix") format("embedded-opentype"),
-    url("/font/ReformaGroteskMedium.woff2") format("woff2"), url("/font/ReformaGroteskMedium.woff") format("woff"),
+    url("/font/ReformaGroteskMedium.woff2") format("woff2"),
+    url("/font/ReformaGroteskMedium.woff") format("woff"),
     url("/font/ReformaGroteskMedium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
@@ -35,7 +38,8 @@
   src: url("/font/ReformaGroteskLight.eot");
   src: local("Reforma Grotesk Light"), local("/font/ReformaGroteskLight"),
     url("/font/ReformaGroteskLight.eot?#iefix") format("embedded-opentype"),
-    url("/font/ReformaGroteskLight.woff2") format("woff2"), url("/font/ReformaGroteskLight.woff") format("woff"),
+    url("/font/ReformaGroteskLight.woff2") format("woff2"),
+    url("/font/ReformaGroteskLight.woff") format("woff"),
     url("/font/ReformaGroteskLight.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
@@ -153,13 +157,12 @@ body {
 
 #directionPopup {
   position: fixed;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   z-index: 99;
-  
 }
 #directionPopup .directionSection {
   background-color: #1e1e1e;
@@ -170,19 +173,22 @@ body {
   width: 80%;
   height: 80%;
   z-index: 100;
-  overflow: hidden;
+  overflow-x: auto;
 }
 #directionPopup .directionSection .directionContainer {
   display: flex;
   padding: 40px;
 }
 #directionPopup .directionSection .directionContainer .image {
-  width: 400px;
+  min-width: 400px;
   height: 400px;
   margin-right: 40px;
   margin-bottom: 40px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+#directionPopup .directionSection .directionContainer .textContainer {
+  max-width: 50%;
 }
 #directionPopup .directionSection .directionContainer .textContainer > h2 {
   line-height: 0.8;
@@ -190,7 +196,8 @@ body {
   font-size: 3rem;
 }
 #directionPopup .directionSection .directionContainer .textContainer > p {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
+  font-family: "Ubuntu";
 }
 
 #exit {
@@ -199,6 +206,7 @@ body {
   right: 65px;
   width: 70px;
   height: 70px;
+  pointer-events: none;
 }
 #exit .stick {
   position: absolute;
@@ -342,13 +350,22 @@ header nav .contacts p {
   font-weight: 400;
   font-size: 2rem;
 }
-header h1 {
+header .textContainer {
+  max-width: 700px;
+}
+header .textContainer h1 {
   font-size: var(--main-title-size);
   font-weight: 400;
   text-transform: uppercase;
 }
-header h1 span {
+header .textContainer h1 span {
   color: var(--yellow);
+}
+header .textContainer h2 {
+  font-size: 4.3rem;
+  font-family: "Reforma Grotesk";
+  text-transform: uppercase;
+  font-weight: 400;
 }
 header h3 {
   font-family: "Ubuntu";
@@ -364,11 +381,12 @@ header .signup {
   font-size: 2.5rem;
 }
 header .review {
+  max-width: 600px;
   margin-bottom: 70px;
   font-size: 1.5rem;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
+  text-align: justify;
 }
-
 
 .bot {
   background-color: var(--black);
@@ -542,6 +560,8 @@ header .review {
   opacity: 1;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
+  overflow-x: auto;
+  overflow-y: visible;
 }
 .coaches .coach .hover-group h4 {
   font-size: 2rem;
@@ -858,9 +878,19 @@ section {
   .coaches .coach .hover-group p {
     font-size: 1.1rem;
   }
+  .directionContainer {
+    flex-direction: column;
+  }
+  #directionPopup #exit {
+    display: none;
+  }
   #directionPopup .directionSection .directionContainer .image {
-    height: 300px;
-    width: 300px;
+    height: 380px;
+    width: 90%;
+    margin: 0 auto 40px auto;
+  }
+  #directionPopup .directionSection .directionContainer .textContainer {
+    max-width: 100%;
   }
 }
 @media (max-width: 1199px) {
@@ -1003,10 +1033,6 @@ section {
   .directs .all-directs #direction {
     margin: 30px 0;
   }
-  #directionPopup .directionSection .directionContainer .image {
-    height: 280px;
-    width: 280px;
-  }
   #directionPopup .directionSection .directionContainer .textContainer > h2 {
     font-size: 2.6rem;
   }
@@ -1068,9 +1094,11 @@ section {
   .why .why-container .content p {
     font-size: 1.5rem;
   }
-  #directionPopup .directionSection .directionContainer .image {
-    width: 240px;
-    height: 240px;
+  .directionContainer {
+    flex-direction: column;
+  }
+  #directionPopup .directionSection .directionContainer .textContainer {
+    max-width: 90%;
   }
   #directionPopup .directionSection .directionContainer .textContainer > h2 {
     font-size: 2rem;
@@ -1181,23 +1209,22 @@ section {
   .mission .p-container > p {
     text-align: justify;
   }
-  #directionPopup .directionSection .directionContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-  #directionPopup .directionSection .directionContainer .image {
-    width: 280px;
-    height: 280px;
-    margin-right: 0;
-  }
-  #directionPopup .directionSection .directionContainer .textContainer > h2 {
-    font-size: 1.8rem;
-  }
   .signup-form .title {
     font-size: 3.5rem;
   }
   .signup-form input {
     width: 100%;
+  }
+  #directionPopup .directionSection .directionContainer .image {
+    height: 180px;
+    min-width: 200px;
+    margin: 0 auto 40px auto;
+  }
+  #directionPopup .directionSection .directionContainer .textContainer {
+    max-width: 100%;
+  }
+  #directionPopup .directionSection .directionContainer {
+    padding: 20px;
   }
   footer .wrapper {
     -ms-flex-wrap: wrap;
@@ -1225,7 +1252,7 @@ section {
 }
 @media (min-width: 1400px) {
   .wrapper {
-    max-width: 1360px;
+    max-width: 1400px;
   }
   .mission .mission-container {
     width: 80%;

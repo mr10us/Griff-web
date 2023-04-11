@@ -10,6 +10,7 @@ document.querySelectorAll('#direction').forEach(element => {
   element.onclick = () => {
 
     directionPopup.classList.remove('none');
+    document.body.style.overflow = 'hidden';
 
     if (element.children[0].style.backgroundImage != null) {
       popupImg.style.backgroundImage = element.children[0].style.backgroundImage;
@@ -31,6 +32,7 @@ directionPopup.onclick = (e) => {
 
   if (e.target.id == 'directionPopup') {
     directionPopup.classList.add('none');
+    document.body.style.overflow = 'auto';
   }
   scrollArrow.style.zIndex = "999";
   

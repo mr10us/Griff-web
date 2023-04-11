@@ -27,5 +27,4 @@ collections:
       - { label: "Ім'я тренера", name: "fullName", widget: "string" }
       - { label: "Напрямок тренера", name: "title", widget: "string" }
       - { label: "Зображення", name: "image", widget: "image" }
-      - { label: "Освіта", name: "educationDesc", widget: "string", required: false }
-      - { label: "Здобутки", name: "achievementDesc", widget: "string", required: false }
+      - { label: "Про тренера", name: "about", widget: "string", required: true }

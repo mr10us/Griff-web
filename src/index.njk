@@ -24,6 +24,10 @@ layout: 'base.njk'
 
     <div id="directionPopup" class="none">
         <div class="wrapper"></div>
+        <div id="exit">
+            <div class="stick"></div>
+            <div class="stick"></div>
+        </div>
         <div class="directionSection">
             <div class="directionContainer">
                 <div class="image" style="background-image: url(/image/unloaded.png)"></div>
@@ -131,13 +135,9 @@ layout: 'base.njk'
                             <div class="coach-photo" style="background-image: url({{ coach.data.image }});">
                                 <div class="hover-group">
                                     <h4>{{ coach.data.fullName }}</h4>
-                                    {% if coach.data.educationDesc.length %}
-                                        <h4>Освіта</h4>
-                                        <p>{{ coach.data.educationDesc}}</p>
-                                    {% endif %}
-                                    {% if coach.data.achievementDesc.length %}
-                                        <h4>Здобутки</h4>
-                                        <p>{{ coach.data.achievementDesc}}</p>
+                                    {% if coach.data.about.length %}
+                                        <h4>Про тренера</h4>
+                                        <p>{{ coach.data.about | safe }}</p>
                                     {% endif %}
                                 </div>
                             </div>
@@ -175,7 +175,7 @@ layout: 'base.njk'
                         <div id="direction">
                             <div style="background-image: url({{ direct.data.image }})"></div>
                             <p>{{ direct.data.title }}</p>
-                            <p class="description none">{{ direct.data.description }}</p>
+                            <p class="description none">{{ direct.data.description | safe }}</p>
                         </div>
                     {%- endfor -%}
                 </div>
