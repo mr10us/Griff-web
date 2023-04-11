@@ -514,9 +514,10 @@ header .review {
 }
 .coaches {
   background-color: var(--black);
-}
-.coaches {
   padding-bottom: 50px;
+}
+.coaches .wrapper {
+  max-width: 1400px;
 }
 .coaches .coaches-container {
   display: -webkit-box;
@@ -1252,7 +1253,7 @@ section {
 }
 @media (min-width: 1400px) {
   .wrapper {
-    max-width: 1400px;
+    max-width: 1360px;
   }
   .mission .mission-container {
     width: 80%;
