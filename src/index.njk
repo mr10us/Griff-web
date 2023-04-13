@@ -141,7 +141,7 @@ layout: 'base.njk'
                                     {% endif %}
                                 </div>
                             </div>
-                            <p>{{ coach.data.title}}</p>
+                            <p>{{ coach.data.title | safe}}</p>
                         </div>
                     {%- endfor -%}
                     
