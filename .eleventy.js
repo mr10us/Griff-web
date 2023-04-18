@@ -8,6 +8,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/image');
   eleventyConfig.addPassthroughCopy('./src/admin');
   eleventyConfig.addPassthroughCopy('./src/confirmForm');
+  eleventyConfig.addPassthroughCopy('./src/analytics.txt');
+  
   
 
   return {
