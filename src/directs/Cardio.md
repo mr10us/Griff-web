@@ -1,5 +1,5 @@
 ---
-title: Кардіозона
-image: '/image/directs/cardio.png'
+title: Тренажерний зал
+image: '/image/directs/gym.png'
 description: 
 ---
